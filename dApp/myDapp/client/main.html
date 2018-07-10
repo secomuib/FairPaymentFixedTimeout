@@ -1,0 +1,66 @@
+
+<head>
+  <title>PFFT</title>
+</head>
+
+<body>
+	<div class="row">
+    		<div class="medium-10 medium-offset-1">
+		<h1> PayFairFixedTimeout</h1>
+		{{> Smsg}}
+      		</div>
+   	 </div>
+</body>
+
+
+<template name="Smsg">
+<div id="container" class="container">
+  <div class="left">
+  <div class="medium-4 columns">
+    <h3>Create Contract</h3>
+    <p><input type="text" id="sellerAddress" placeholder="Seller address"></p>
+    <p><input type="text" id="timeOut" placeholder="timeout"></p>
+    <p><input type="date" id="date"></p>
+    <p><input type="text" id="payableCost" placeholder="ethers"></p>
+    <button href="#" class="button" id="createContract">Create contract</button>
+
+  </div>
+
+  <div id="buyer" class="medium-4 columns">
+    <h3>Options for buyer</h3>
+    <button href="#" class="button" id="cancel1">Cancel</button>
+  </div>
+  <div id="seller" class="medium-4 columns">
+    <h3>Options for seller</h3>
+    <p><input type="text" id="sellerPrice" placeholder="ethers"></p>
+    <button href="#" class="button" id="finished">Finished</button>
+  </div>
+  </div>
+  <div class="right">
+    <h3>Receipt</h3>
+    <textarea id="recibo" rows="16" cols="132" readonly>
+Order:
+
+
+Date:
+
+
+Buyer address:
+
+
+Seller address:
+
+
+Cost (ethers):
+
+
+Seller sign:
+</textarea>
+</div>
+</div>
+<div id="loader"><div id="loader1">
+</div>
+<div id="creating">Creating contract...</div>
+</div>
+
+</template>
